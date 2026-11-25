@@ -31,7 +31,7 @@ jobs:
           username: ${{secrets.EC2_USERNAME}} # EC2 접속용 사용자명 (예: ubuntu)
           key: ${{ secrets.EC2_SSH_KEY }}     # SSH 개인 키 (Secrets에 등록)
           source: "./docker-compose.yml,./dist,./Dockerfile"  # EC2로 복사할 파일/폴더 목록
-          target: "~/react-cicd"              # EC2 상의 대상 디렉토리
+          target: "~/react-cicd"              # EC2 상의 대상 디렉토리.
 
       - name: SSH into EC2 and deploy
         uses: appleboy/ssh-action@v1.0.3  # EC2 서버에 SSH로 접속하여 명령어 실행
